@@ -1,5 +1,3 @@
-require('pry')
-
 class Float
   define_method(:coin_combination) do
     quarters = 0
@@ -7,16 +5,15 @@ class Float
     nickels = 0
     pennies = 0
     total = self
-    until total.<=(0.24)
+    until total.<=(0.241)
       total = total.-(0.25)
       quarters +=1
     end
-    until total.<=(0.09)
+    until total.<=(0.091)
       total = total.-(0.10)
       dimes +=1
     end
-    until total.<=(0.04)
-    #  binding.pry
+    until total.<=(0.041)
       total = total.-(0.05)
       nickels +=1
     end
