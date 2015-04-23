@@ -4,8 +4,13 @@ class Float
     dimes = 0
     nickels = 0
     pennies = 0
+    result = []
     total = self.*(100).to_i()
     until total.<=(24)
+      if quarters.>=3
+        result.push("Ran out of quarters, your change is")
+        break
+      end
       total = total.-(25)
       quarters +=1
     end
@@ -21,7 +26,6 @@ class Float
       total = total.-(1)
       pennies +=1
     end
-    result = []
     if(quarters > 0)
       result.push("#{quarters} quarters")
     end
@@ -35,6 +39,5 @@ class Float
       result.push("#{pennies} pennies")
     end
     result.join(" ")
-     #{}"#{quarters} quarters #{dimes} dimes #{nickels} nickels #{pennies} pennies"
   end
 end

@@ -15,6 +15,6 @@ describe('Float#coin_combination') do
   end
 
   it("This will find the smallest amount of change for a give amount of money") do
-    expect((1.05).coin_combination()).to(eq("4 quarters 1 nickels"))
+    expect((1.05).coin_combination()).to(eq("Ran out of quarters, your change is 3 quarters 3 dimes"))
   end
 end

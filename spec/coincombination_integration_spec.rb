@@ -7,6 +7,6 @@ describe('result path', {:type => :feature}) do
     visit('/')
     fill_in('amount', :with => 1.05)
     click_button('Send')
-    expect(page).to have_content('4 quarters 1 nickels')
+    expect(page).to have_content('Ran out of quarters, your change is 3 quarters 3 dimes')
   end
 end
