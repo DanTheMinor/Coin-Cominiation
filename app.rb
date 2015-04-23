@@ -9,9 +9,7 @@ get('/') do
 end
 
 get('/result') do
-
-  @total = params.fetch('amount').coin_combination()
-  puts total
-  binding.pry
+  @total = params.fetch('amount').to_f
+  @total = @total.coin_combination()
   erb(:result)
 end

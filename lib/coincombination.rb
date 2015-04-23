@@ -21,6 +21,20 @@ class Float
       total = total.-(1)
       pennies +=1
     end
-     "#{quarters} quarters #{dimes} dimes #{nickels} nickels #{pennies} pennies"
+    result = []
+    if(quarters > 0)
+      result.push("#{quarters} quarters")
+    end
+    if(dimes > 0)
+      result.push("#{dimes} dimes")
+    end
+    if(nickels > 0)
+      result.push("#{nickels} nickels")
+    end
+    if(pennies > 0)
+      result.push("#{pennies} pennies")
+    end
+    result.join(" ")
+     #{}"#{quarters} quarters #{dimes} dimes #{nickels} nickels #{pennies} pennies"
   end
 end
