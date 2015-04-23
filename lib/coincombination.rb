@@ -4,23 +4,23 @@ class Float
     dimes = 0
     nickels = 0
     pennies = 0
-    total = self
-    until total.<=(0.241)
-      total = total.-(0.25)
+    total = self.*(100).to_i()
+    until total.<=(24)
+      total = total.-(25)
       quarters +=1
     end
-    until total.<=(0.091)
-      total = total.-(0.10)
+    until total.<=(9)
+      total = total.-(10)
       dimes +=1
     end
-    until total.<=(0.041)
-      total = total.-(0.05)
+    until total.<=(4)
+      total = total.-(5)
       nickels +=1
     end
-    until total.<(0.0001)
-      total = total.-(0.01)
+    until total.==(0)
+      total = total.-(1)
       pennies +=1
     end
-     quarters.to_s() + " quarters " + dimes.to_s() + " dimes " + nickels.to_s() + " nickels " + pennies.to_s() + " pennies"
+     "#{quarters} quarters #{dimes} dimes #{nickels} nickels #{pennies} pennies"
   end
 end
